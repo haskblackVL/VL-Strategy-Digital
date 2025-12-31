@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VL Strategy Digital | Premium Software Factory</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <style>
+
+        /* Botón Flotante de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 10px 25px rgba(37, 211, 102, 0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    color: #fff;
+    box-shadow: 0px 15px 30px rgba(37, 211, 102, 0.5);
+}
+
+/* Animación de pulso para llamar la atención suavemente */
+.whatsapp-float::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #25d366;
+    opacity: 0.7;
+    z-index: -1;
+    animation: pulse-whatsapp 2s infinite;
+}
+
+@keyframes pulse-whatsapp {
+    0% { transform: scale(1); opacity: 0.7; }
+    100% { transform: scale(1.6); opacity: 0; }
+}
+
+/* Icono dentro del botón */
+.whatsapp-float i {
+    margin-top: 2px;
+}
+
+        :root {
+            --primary: #6366f1; /* Indigo Moderno */
+            --dark-base: #030712;
+            --glass: rgba(255, 255, 255, 0.03);
+            --border-glass: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            background-color: var(--dark-base);
+            color: #ffffff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Tipografía legible */
+        h1, h2, h3 { font-weight: 700; letter-spacing: -1px; color: #ffffff; }
+        p { color: #9ca3af; line-height: 1.8; }
+
+        .navbar { background: rgba(3, 7, 18, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-glass); }
+        
+        /* Hero Glass */
+        .hero-premium {
+            padding: 140px 0 100px;
+            background: radial-gradient(circle at 50% -20%, #312e81 0%, transparent 50%);
+        }
+
+        /* Tarjetas con Efecto Cristal */
+        .card-glass {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-glass);
+            border-radius: 24px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .card-glass:hover {
+            border-color: var(--primary);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .img-service {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            filter: grayscale(40%) contrast(110%);
+        }
+
+        .badge-tech {
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--primary);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">VL <span style="color:var(--primary)">STRATEGY DIGITAL</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                <li class="nav-item"><a class="nav-link" href="#proceso">Proceso</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-outline-primary ms-lg-3" href="#contacto">Iniciar Proyecto</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="hero-premium text-center">
+    <div class="container">
+        <span class="badge-tech mb-3">Estudio de Desarrollo Elite</span>
+        <h1 class="display-3 mb-4">Arquitectura Digital para <br><span style="color:var(--primary)">Líderes de Mercado</span></h1>
+        <p class="lead mx-auto mb-5" style="max-width: 750px;">
+            No solo creamos software; diseñamos ventajas competitivas. VL Strategy Digital es tu partner tecnológico para escalabilidad y diseño de alto impacto.
+        </p>
+    </div>
+</header>
+
+<section id="servicios" class="container py-5">
+    <div class="row g-4">
+        <div class="col-lg-6">
+            <div class="card-glass">
+                <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&q=80&w=1000" class="img-service" alt="Web Apps">
+                <div class="p-4">
+                    <h3>Sistemas Web de Alto Tráfico</h3>
+                    <p>Desarrollamos ecosistemas robustos utilizando **React, Next.js y Node.js**. Enfoque en velocidad de carga inferior a 2s y seguridad nivel bancario.</p>
+                    <div class="mt-3">
+                        <span class="badge-tech">SSR</span> <span class="badge-tech">API Rest</span> <span class="badge-tech">Cloud Hosting</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card-glass">
+                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=1000" class="img-service" alt="Mobile Apps">
+                <div class="p-4">
+                    <h3>Experiencias Móviles Nativas</h3>
+                    <p>Apps personalizadas con **Flutter o React Native**. Optimizamos la experiencia de usuario (UX) para maximizar la retención y conversión.</p>
+                    <div class="mt-3">
+                        <span class="badge-tech">iOS</span> <span class="badge-tech">Android</span> <span class="badge-tech">UX/UI Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contacto" class="container py-5 my-5">
+    <div class="card-glass p-5">
+        <div class="row align-items-center">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+                <h2 class="display-5">¿Listo para evolucionar?</h2>
+                <p>Déjanos tus datos y un consultor senior de VL Strategy se pondrá en contacto en menos de 24 horas.</p>
+            </div>
+            <div class="col-lg-7">
+                <form id="contact-form">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input type="text" name="nombre" class="form-control border-secondary p-3" placeholder="Nombre completo" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="email" name="email" class="form-control border-secondary p-3" placeholder="Correo" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="tel" name="telefono" class="form-control border-secondary p-3" placeholder="Teléfono / WhatsApp" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <select name="pais" class="form-select border-secondary p-3" required>
+                                <option value="">Selecciona tu país</option>
+                                <option value="México">México</option>
+                                <option value="Colombia">Colombia</option>
+                                <option value="España">España</option>
+                                <option value="Argentina">Argentina</option>
+                                <option value="EE.UU">Estados Unidos</option>
+                            </select>
+                        </div>
+                        <div class="col-12 mb-4">
+                            <textarea name="intereses" class="form-control border-secondary p-3" rows="4" placeholder="Háblanos de tu proyecto o necesidades específicas..."></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg w-100 py-3 fw-bold">ENVIAR SOLICITUD DE CONSULTA</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    (function() { emailjs.init("QjZOcZa9FFeJbF2VD"); })();
+
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const btn = e.target.querySelector('button');
+        btn.innerText = "ENVIANDO PROTOCOLO...";
+        
+        emailjs.sendForm('service_2niol6s', 'template_stqfp8j', this)
+            .then(() => {
+                alert('Solicitud recibida. Un consultor te contactará pronto.');
+                btn.innerText = "ENVIAR SOLICITUD DE CONSULTA";
+                e.target.reset();
+            }, (err) => {
+                alert('Error en conexión: ' + JSON.stringify(err));
+            });
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!--quiero otro diseño elegante y profesional respeta el nombre de "VL Strategy Digital", con informacion de herramientas y servicios que se ofrecen, que las letras del placeholder del formulario sean visibles, y que el formulario tenga la funcion de mardar los datos al correo por EmailJS-->
+<section id="faq" class="container py-5">
+    <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold">Preguntas <span style="color:var(--primary)">Frecuentes</span></h2>
+        <p class="text-white">Despejamos tus dudas sobre cómo trabajamos en VL Strategy Digital.</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="accordion accordion-flush" id="accordionFAQ">
+                
+                <div class="accordion-item card-glass mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-transparent text-white fw-bold py-4" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            ¿Cuánto tiempo toma desarrollar un sitio web personalizado?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse text-white" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body">
+                            Dependiendo de la complejidad, un sitio web corporativo suele tomar entre **2 a 4 semanas**. Proyectos más robustos como E-commerce o plataformas Web pueden requerir de 6 a 8 semanas para garantizar una optimización total.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item card-glass mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-transparent text-white fw-bold py-4" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            ¿Las aplicaciones móviles funcionan en iOS y Android?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body text-white">
+                            Correcto. En **VL Strategy Digital** utilizamos tecnologías híbridas como **Flutter y React Native**, lo que nos permite desarrollar una sola base de código que funciona de manera fluida y nativa tanto en iPhone como en dispositivos Android, reduciendo costos y tiempo de mantenimiento.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item card-glass mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-transparent text-white fw-bold py-4" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            ¿Ofrecen soporte después de lanzar el proyecto?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body text-white">
+                            Sí, ofrecemos planes de mantenimiento que incluyen actualizaciones de seguridad, respaldos periódicos y soporte técnico para asegurar que tu plataforma siempre funcione al 100%.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item card-glass mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-transparent text-white fw-bold py-4" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                            ¿Cómo inicio mi proyecto con ustedes?
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body text-white">
+                            Es muy sencillo. Solo debes completar el formulario de abajo con tus datos. Un consultor senior analizará tu propuesta y te contactaremos en menos de 24 horas para agendar una sesión de diagnóstico gratuita.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="text-center">
+    <p class="fw-bold">VL STRATEGY DIGITAL &copy; 2025</p>
+    <p class="small text-secondary">Desarrollando el futuro, paso a paso.</p>
+</footer>
+<a href="https://wa.me/5530197585?text=Hola%20VL%20Strategy%20Digital,%20me%20gustaría%20solicitar%20información%20sobre%20sus%20servicios." 
+   class="whatsapp-float" 
+   target="_blank" 
+   rel="noopener noreferrer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+    </svg>
+</a>
+</body>
+</html>
+
+
